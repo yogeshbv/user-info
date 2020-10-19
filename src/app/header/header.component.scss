@@ -1,0 +1,36 @@
+.open {
+    display: block;
+}
+
+.close{
+    display: none;
+}
+
+.main-nav {
+    a {
+        &.active-link {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.dropdown-container {
+    position: relative;
+    .themes-dropdown {
+        position: absolute;
+        right: 0;
+        ul {
+            margin: 0;
+            padding: 0;
+            width: 250px;
+            background: #FFFFFF;
+            box-shadow: 0 1px 3px #cccccc;
+            li.themes {
+                padding: 10px;
+                display: block;
+                cursor: pointer;
+            }
+        }
+    }
+}

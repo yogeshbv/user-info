@@ -1,0 +1,30 @@
+<header class="bg-white border-bottom shadow-sm">
+    <div class="container d-flex flex-column flex-md-row align-items-center p-4 px-md-4">
+        <h5 class="mr-3 font-weight-normal mb-0">
+            <a [routerLink]="['/user-list']">My users</a>
+        </h5>
+        <nav class="my-2 mr-md-auto my-md-0 mr-md-3 main-nav">
+            <a routerLinkActive="active-link" class="p-2 text-dark" [routerLink]="['/user-list']">All users</a>
+            <a routerLinkActive="active-link" class="p-2 text-dark" [routerLink]="['create-user']">Create user</a>
+            <a routerLinkActive="active-link" class="p-2 text-dark" [routerLink]="['remove-user']">Delete useer</a>
+        </nav>
+        
+
+        <div class="dropdown-container">
+            <button class="btn btn-outline-primary " (click)="themes($event)">Select theme</button>
+        
+            <div class="themes-dropdown" *ngIf="showOption">
+                <ul>
+                    <li class="themes red" (click)="onThemeSelect('red')"><span>Red</span></li>
+                    <li class="themes green" (click)="onThemeSelect('green')"><span>Green</span></li>
+                    <li class="themes blue" (click)="onThemeSelect('blue')"><span>Blue</span></li>
+                    <li class="themes default" (click)="onThemeSelect('default')"><span>Default</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container my-5">
+    <h3 class="p-3 bg-primary text-white">{{ title | uppercase }}</h3>
+</div>
